@@ -8,7 +8,7 @@
 :: Get current power plan
 for /f "tokens=4" %%I in ('powercfg -getactivescheme') do set CurrentPowerPlanGUID=%%I
 
-:: Disable Turbo Boost for current power plan DC/AC [AC-Plugged in | DC - On battery]
+:: Enable Turbo Boost for current power plan DC/AC [AC-Plugged in | DC - On battery]
 @powercfg -setacvalueindex %CurrentPowerPlanGUID% 54533251-82be-4824-96c1-47b60b740d00 be337238-0d82-4146-a960-4f3749d470c7 2 >nul 2>&1
 @powercfg -setdcvalueindex %CurrentPowerPlanGUID% 54533251-82be-4824-96c1-47b60b740d00 be337238-0d82-4146-a960-4f3749d470c7 2 >nul 2>&1
 
