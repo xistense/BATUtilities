@@ -1,4 +1,4 @@
-Enable/Disable Turbo Boost via cmd.
+#Enable/Disable Turbo Boost via cmd.
 
 This was created as a measure to lower temperatures on some CPUs, as Turbo Boost might push them to high values.
 
